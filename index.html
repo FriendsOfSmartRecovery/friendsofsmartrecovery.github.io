@@ -1,1 +1,218 @@
-<h1>Friends Of Smart Recovery</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="SMART, recovery, friends, chat, community, discord">
+    <meta name="description" content="Friends of SMART Recovery is a community of people who have all chosen to use the evidence and science-based approach, SMART Recovery, in their individual journeys towards overcoming addictions and other maladaptive behaviors, and maintain sustainable sobriety while living a fulfilling and balanced life.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends of SMART Recovery</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: sans-serif;
+        }
+        /* Background image */
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        /* Overlay to enhance text readability */
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* Centered container */
+        .container {
+            position: relative;
+            z-index: 1;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+        /* Logo */
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+        /* Navigation buttons */
+        nav {
+            margin-bottom: 20px;
+        }
+        nav button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.75);
+            color: #333;
+            border: none;
+            border-radius: 5px;
+        }
+        nav button:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        /* Content area */
+        .content {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .content ul li {
+            list-style: none;
+        }
+        .content button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0);
+            color: #333;
+            border: 1px solid #777;
+            border-radius: 5px;
+        }
+        .content button:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            nav button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+            .content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <button onclick="navigate('home')">Home</button>
+            <button onclick="navigate('about-us')">Who We Are</button>
+            <button onclick="navigate('about-smart')">Learn About SMART</button>
+            <button onclick="navigate('discord')">Join Our Discord Server</button>
+            <button onclick="navigate('meetings')">Attend a Meeting</button>
+            <button onclick="navigate('family-and-friends')">Family And Friends</button>
+        </nav>
+        <div class="content" id="content">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+
+    <script>
+        // Content for each page
+        const routes = {
+            home: `
+                <h1>Friends of SMART Recovery</h1>
+                <br />
+                <p>Friends of SMART Recovery is a community of people who have all chosen to use the evidence and science-based approach, SMART Recovery, in their individual journeys towards overcoming addictions and other maladaptive behaviors, and maintain sustainable sobriety while living a fulfilling and balanced life.</p>
+            `,
+            'about-us': `
+                <h1>Who We Are</h1>
+                <br />
+                <p>Friends of SMART Recovery is a community of people who have all chosen to use the evidence and science-based approach, SMART Recovery, in their individual journeys towards overcoming addictions and other maladaptive behaviors, and maintain sustainable sobriety while living a fulfilling and balanced life.</p>
+                <br />
+                <p>We connect with each other through a private Discord server in which we provide support for our peers in-between official SMART Meetings.</p>
+                <br />
+                <p>The Friends of SMART Recovery website is not affiliated with, or run by, SMART Recovery. The website and Discord server is managed by facilitators who have been trained by SMART Recovery and volunteer for SMART Recovery.</p>
+                <br />
+                <button onclick="navigate('home')">Back to Home</button>
+            `,
+            'about-smart': `
+                <h1>Learn More About SMART Recovery</h1>
+                <br />
+                <p><b>SMART</b> stands for <b>S</b>elf <b>M</b>anagement and <b>R</b>ecovery <b>T</b>raining</p>
+                <br />
+                <p>SMART Recovery is an evidenced-informed recovery method grounded in Rational Emotive Behavioral Therapy (REBT) and Cognitive Behavioral Therapy (CBT), that supports people with substance dependencies or problem behaviors to:</p>
+                <br />
+                <ul>
+                  <li>1. Build and maintain motivation</li>
+                  <li>2. Cope with urges and cravings</li>
+                  <li>3. Manage thoughts, feelings and behaviors</li>
+                  <li>4. Live a balanced life</li>
+                </ul>
+                <br />
+                <p>Learn <em>even</em> more at the:</p>
+                <a href="https://smartrecovery.org/" target="_blank">SMART Recovery Website</a>
+            `,
+            discord: `
+                <h1>Join Our Discord Server</h1>
+                <br />
+                <p>We connect with each other through a private Discord server in which we provide support for our peers in-between official SMART Meetings.</p>
+                <br />
+                <p>Discord is a free, 24/7 chat app. You can join communities (servers) and chat with like-minded people. In the Friends of SMART Recovery Discord server, we help one another with our recovery. The biggest predictor is whether or not someone can successfully give up an addiction is their community and who they surround themselves with.</p>
+                <br />
+                <a href="https://friendsofsmartrecovery.com/discord/" target="_blank">Join Our Discord Server Here</a>
+            `,
+            meetings: `
+                <h1>Attend a Meeting</h1>
+                <br />
+                <p>There are hundreds of SMART Recovery meetings per week. With the majority of them being online, you will always find a meeting when you need one. There are also meetings specifically for Family and Friends, LGBTQ, Women, and more.</p>
+                <br />
+                <a href="https://meetings.smartrecovery.org/" target="">Use the Meeting Finder Here</a>
+                <br />
+                <br />
+                <p>P.S. One of the facilitators of the Friends community has a meeting specifically for adults aged 18-30. You can find it here.</p>
+                <br />
+                <a href="https://meetings.smartrecovery.org/meetings/7852/" target="_blank">Young Adult Meeting #7852</a>
+            `,
+            'family-and-friends': `
+                <h1>Family and Friends</h1>
+                <br />
+                <p>Being in a close relationship with someone struggling with addiction or problematic behaviors is highly stressful. SMART Recovery has many Family & Friends support meetings. These meetings are run by trained facilitators who often have their own experiences as a family member affected by a loved one's addiction.</p>
+                <br />
+                <a href="https://meetings.smartrecovery.org/meetings/?location=Briarwood,%20NY%2011435,%20USA&coordinates=1000&meetingType=1" target="_blank">Find a SMART Family & Friends Meeting</a>
+                <br />
+                <br />
+                <p>The Friends of SMART Recovery Discord server also has a channel specifically for people struggling with friends and family to talk and support each other.</p>
+            `
+        };
+
+        // Function to handle navigation
+        function navigate(page) {
+            // Update content
+            document.getElementById('content').innerHTML = routes[page] || routes['home'];
+            // Update URL hash
+            window.location.hash = page;
+        }
+
+        // Handle browser navigation (back/forward)
+        window.addEventListener('hashchange', () => {
+            const page = window.location.hash.replace('#', '');
+            navigate(page || 'home');
+        });
+
+        // Initialize page on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const page = window.location.hash.replace('#', '');
+            navigate(page || 'home');
+        });
+    </script>
+</body>
+</html>
