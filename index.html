@@ -19,8 +19,10 @@
             font-family: sans-serif;
         }
         /* Background image */
+            /* background: url('images/background.jpg') no-repeat center center fixed; */
         body {
-            background: url('images/background.jpg') no-repeat center center fixed;
+            background-color: #111; /* Fallback background color */
+            background: no-repeat center center fixed;
             background-size: cover;
         }
         /* Overlay to enhance text readability */
@@ -194,10 +196,27 @@
             `
         };
 
+        // Array of background images
+        const backgroundImages = [
+            'images/background/1.jpg',
+            'images/background/2.jpg',
+            'images/background/3.jpg',
+            'images/background/4.jpg',
+            'images/background/5.jpg'
+        ];
+
+        // Function to set a random background image
+        function setRandomBackground() {
+            const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+            const selectedImage = backgroundImages[randomIndex];
+            document.body.style.backgroundImage = `url('${selectedImage}')`;
+        }
+
         // Function to handle navigation
         function navigate(page) {
             // Update content
             document.getElementById('content').innerHTML = routes[page] || routes['home'];
+
             // Update URL hash
             window.location.hash = page;
         }
@@ -210,6 +229,10 @@
 
         // Initialize page on load
         document.addEventListener('DOMContentLoaded', () => {
+            // Set random background image
+            setRandomBackground();
+
+            // Navigate to the current page or default to home
             const page = window.location.hash.replace('#', '');
             navigate(page || 'home');
         });
