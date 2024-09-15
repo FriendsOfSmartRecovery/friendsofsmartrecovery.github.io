@@ -78,20 +78,20 @@ nav button {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.75);
+    background: #efefef;
     color: #333;
     border: none;
     border-radius: 5px;
 }
 nav button:hover {
-    background: rgba(255, 255, 255, 1);
+    background: #fff;
 }
 
 
 /* Content area */
 .content {
     max-width: 1000px;
-    background: rgba(255, 255, 255, 0.75);
+    background: #efefef;
     color: #333;
     padding: 20px;
     border-radius: 5px;
@@ -107,13 +107,13 @@ nav button:hover {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0);
+    background: #efefef;
     color: #333;
     border: 1px solid #777;
     border-radius: 5px;
 }
 .content button:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: #fff;
 }
 
 
