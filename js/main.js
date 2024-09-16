@@ -27,6 +27,9 @@ async function navigate(page) {
         if (response.ok) {
             const html = await response.text();
             document.getElementById('content').innerHTML = html;
+
+            // Add hover animations to buttons
+            addButtonHoverAnimations();
         } else {
             document.getElementById('content').innerHTML = '<p>Page not found.</p>';
         }
@@ -59,3 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: "power2.out",
     });
 });
+
+
+// Function to add hover animations to buttons
+function addButtonHoverAnimations() {
+    // Select all buttons inside the content area
+    const buttons = document.querySelectorAll('.content button');
+
+    buttons.forEach((button) => {
+        // Create a GSAP timeline for the hover effect
+        const hoverAnimation = gsap.to(button, {
+            scale: 1.05,
+            duration: 0.1,
+            paused: true,
+            ease: "power1.inOut"
+        });
+
+        // Add event listeners for mouseenter and mouseleave
+        button.addEventListener('mouseenter', () => hoverAnimation.play());
+        button.addEventListener('mouseleave', () => hoverAnimation.reverse());
+    });
+}
