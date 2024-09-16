@@ -44,10 +44,10 @@ body {
 .logo {
     margin-top: 50px;
 }
-.logo img {
+.logo svg {
     height: auto;
     display: block;
-    max-width: 250px;
+    max-width: 256px;
     margin: 0 auto;
     pointer-events: none;
     user-select: none;
@@ -168,9 +168,9 @@ nav button:hover {
         left: 20px;
         margin-top: 0;
     }
-    .logo img {
+    .logo svg {
         margin: 0;
-        max-width: 150px;
+        max-width: 200px;
     }
     .container {
         min-height: 100vh;
