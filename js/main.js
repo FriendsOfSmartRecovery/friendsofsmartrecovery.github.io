@@ -52,4 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navigate to the current page or default to home
     const page = window.location.hash.replace('#', '');
     navigate(page || 'home');
+
+    gsap.from('.content', {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.out",
+    });
 });
