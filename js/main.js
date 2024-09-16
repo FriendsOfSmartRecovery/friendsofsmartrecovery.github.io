@@ -56,11 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const page = window.location.hash.replace('#', '');
     navigate(page || 'home');
 
-    gsap.from('.content', {
-      opacity: 0,
-      duration: 0.5,
-      ease: "power2.out",
-    });
+    animateContent()
+    animateLogo();
 });
 
 
@@ -81,5 +78,22 @@ function addButtonHoverAnimations() {
         // Add event listeners for mouseenter and mouseleave
         button.addEventListener('mouseenter', () => hoverAnimation.play());
         button.addEventListener('mouseleave', () => hoverAnimation.reverse());
+    });
+}
+
+function animateContent() {
+    gsap.from('.content', {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.out",
+    });
+}
+
+function animateLogo() {
+    gsap.from('svg text tspan', {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power1.out",
+      stagger: 0.1,
     });
 }
