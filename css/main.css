@@ -82,6 +82,8 @@ nav button {
     color: #333;
     border: none;
     border-radius: 5px;
+    display: block;
+    width: 100%;
 }
 nav button:hover {
     background: #fff;
