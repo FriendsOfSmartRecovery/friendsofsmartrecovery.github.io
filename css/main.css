@@ -43,13 +43,13 @@ body {
 /* Logo */
 .logo {
     margin-top: 50px;
+    cursor: pointer;
 }
 .logo svg {
     height: auto;
     display: block;
     max-width: 256px;
     margin: 0 auto;
-    pointer-events: none;
     user-select: none;
 }
 
