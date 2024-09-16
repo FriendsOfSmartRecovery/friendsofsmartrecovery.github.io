@@ -96,4 +96,8 @@ function animateLogo() {
       ease: "power1.out",
       stagger: 0.1,
     });
+
+    // navigate to the homepage when users click on the logo
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', () => navigate('home'));
 }
