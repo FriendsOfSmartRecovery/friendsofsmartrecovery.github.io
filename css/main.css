@@ -52,6 +52,10 @@ body {
     margin: 0 auto;
     user-select: none;
 }
+.logo svg g .shadow {
+  -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, .5));
+  filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, .5));
+}
 
 
 /* Container for the main content */
@@ -171,10 +175,6 @@ nav button:hover {
     .logo svg {
         margin: 0;
         max-width: 200px;
-    }
-    .logo svg .shadow {
-      -webkit-filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, .5));
-      filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, .5));
     }
     .container {
         min-height: 100vh;
