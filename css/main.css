@@ -105,6 +105,8 @@ nav button:hover {
     padding: 25px;
     border-radius: 5px;
     text-align: left;
+    max-height: 80vh;
+    overflow: auto;
 }
 .content h1 {
   text-align: center;
